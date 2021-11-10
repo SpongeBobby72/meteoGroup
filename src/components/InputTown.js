@@ -27,7 +27,7 @@ const InputTown = (props) => {
         noValidate
         autoComplete="off"
       >
-        <TextField id="ville" label="Ville" variant="outlined" />>
+        <TextField id="ville" label="Ville" variant="outlined" />
         <Stack spacing={2} direction="row">
           <Button 
           onClick={(e) => getValue(e)}
