@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MeteoDay from "./components/MeteoDay";
 import MeteoWeek from "./components/MeteoWeek";
 import NavBar from "./components/NavBar";
+import Meteo8Days from "./components/Meteo8Days";
 
 const App = () => {
   const [playOnce, setPlayOnce] = useState(true);
@@ -9,7 +10,7 @@ const App = () => {
   const timer = new Date(Date.now()).toString().slice(16, 18);
 
   if (playOnce) {
-    if ((6 < timer) && (timer < 19)) {
+    if (6 < timer && timer < 19) {
       setWeatherStyleApp("dayApp");
       setPlayOnce(false);
     }
@@ -19,6 +20,7 @@ const App = () => {
     <div className={weatherStyleApp}>
       <MeteoDay />
       <MeteoWeek />
+      <Meteo8Days />
       <NavBar />
     </div>
   );
