@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import Card from "react-bootstrap/Card";
 import Button from "@mui/material/Button";
 import Sunrise from "../assets/sunrise.svg";
 import Sunset from "../assets/sunset.svg";
 import NotFavorite from "../assets/addFavoris.svg";
 import Favorite from "../assets/deleteFavoris.svg";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 
 import { store } from "../store";
 
@@ -69,14 +73,21 @@ const MeteoDay = () => {
   // console.log(weatherStyle);
 
   return (
-    <div className="meteoDay">
+    <Card className="meteoDay">
       {data.weather && (
-        <div className="CountryIndice">
-          {/* Image de fond */}
-          <Card className="bg-dark text-white" id={data.weather[0].main}>
-            <Card.ImgOverlay>
-              {/* Favoris */}
+        <Card className="CountryIndice">
+
+          <Card sx={{ maxWidth: 345 }}>
+            {/* Image de fond */}
+            <CardMedia
+              className="bg-dark text-white"
+              id={data.weather[0].main}
+            />
+
+            {/* Favoris */}
+            <CardActions>
               <Button
+                size="small"
                 variant="contained"
                 id="favoriteButton"
                 value={data.name}
@@ -84,48 +95,81 @@ const MeteoDay = () => {
               >
                 <img src={Favoris} alt="Favoris" />
               </Button>
+            </CardActions>
 
-              {/* Nom de la ville */}
-              <Card.Title className="ville">{data.name}</Card.Title>
+            {/* Nom de la ville */}
+            <CardContent>
+              <Typography
+                gutterBottom
+                className="ville"
+                variant="h5"
+                component="div"
+              >
+                {data.name}
+              </Typography>
 
               {/* Température actuelle */}
-              <Card.Text className="temperature">
+              <Typography
+                gutterBottom
+                className="temperature"
+                variant="h5"
+                component="div"
+              >
                 {Math.round(data.main.temp)}°
-              </Card.Text>
+              </Typography>
 
               {/* Description du temps */}
-              <Card.Text className="weatherDescr">
+              <Typography className="weatherDescr">
                 {data.weather[0].description}
-              </Card.Text>
+              </Typography>
 
               {/* Levée et couchée de soleil */}
-
-              <Card className="sunriseSunset">
+              <CardContent className="sunriseSunset">
                 {/* Levée de soleil */}
-                <Card className="sunriseCard">
-                  <Card.Img className="imageSun" variant="top" src={Sunrise} />
-                  <Card.Text className="weatherDescrSun">
+                <CardContent className="sunriseCard">
+                  <CardMedia
+                    component="img"
+                    height="35"
+                    src={Sunrise}
+                    className="imageSun"
+                    alt="Couché de soleil"
+                  />
+                  <Typography
+                    className="weatherDescrSun"
+                    variant="body2"
+                    color="text.secondary"
+                  >
                     {new Date(data.sys.sunrise * 1000)
                       .toLocaleString()
                       .slice(12, 17)}
-                  </Card.Text>
-                </Card>
+                  </Typography>
+                </CardContent>
 
                 {/* Couchée de soleil */}
-                <Card className="sunsetCard">
-                  <Card.Img className="imageSun" variant="top" src={Sunset} />
-                  <Card.Text className="weatherDescrSun">
+                <CardContent className="sunsetCard">
+                  <CardMedia
+                    component="img"
+                    height="35"
+                    src={Sunset}
+                    className="imageSun"
+                    alt="Couché de soleil"
+                  />
+                  <Typography
+                    className="weatherDescrSun"
+                    variant="body2"
+                    color="text.secondary"
+                  >
                     {new Date(data.sys.sunset * 1000)
                       .toLocaleString()
                       .slice(12, 17)}
-                  </Card.Text>
-                </Card>
-              </Card>
-            </Card.ImgOverlay>
+                  </Typography>
+                </CardContent>
+              </CardContent>
+            </CardContent>
           </Card>
-        </div>
+        </Card>
       )}
-    </div>
+    </Card>
   );
 };
 
