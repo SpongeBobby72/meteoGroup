@@ -8,12 +8,13 @@ import { getWeather, getWeathersWeek } from "../store/actions/WeatherActions";
 
 const InputTown = (props) => {
 
-  function handleChangeSelect(e) {
-    if (e.target.value.length > 0) {
-      store.dispatch(getWeather(e.target.value));
-      store.dispatch(getWeathersWeek(e.target.value));
+  function getValue() {
+    var input = document.getElementById("ville").value;
+    if (input.length > 0) {
+      store.dispatch(getWeather(input));
+      store.dispatch(getWeathersWeek(input));
     }
-  }
+}
 
   return (
     <div className="InputTown">
@@ -29,8 +30,8 @@ const InputTown = (props) => {
           id="ville"
           label="Ville"
           variant="outlined"
-          onChange={(e) => handleChangeSelect(e)}
         />
+        <input type="button" value="Click me" onClick={(e) => getValue(e)} />
       </Box>
     </div>
   );
