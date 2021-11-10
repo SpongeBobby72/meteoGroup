@@ -1,0 +1,25 @@
+.weatherTime .weatherDate {
+    display: block;
+}
+#backgroundIcon {
+    display: block;
+    margin: auto;
+}
+.tempMiniMaxiDay {
+    display: block;
+}
+.listMeteoTime {
+    margin: auto;
+}
+.cardDiv {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+.cardDiv:last-child {
+    border-right: none;
+}
+
+.listMeteoTime, .cardDiv {
+    width: 150px;
+}

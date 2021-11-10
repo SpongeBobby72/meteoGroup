@@ -1,0 +1,20 @@
+{
+  "favorite": [
+    {
+      "name": "Masuperville",
+      "id": 1
+    },
+    {
+      "name": "Paris",
+      "id": 2
+    },
+    {
+      "name": "Montaigu",
+      "id": 3
+    },
+    {
+      "name": "Par",
+      "id": 4
+    }
+  ]
+}

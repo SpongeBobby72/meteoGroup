@@ -1,0 +1,16 @@
+.navBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#panel1a-header, #panel1a-content {
+    background-color: $color-5;
+    // backdrop-filter: blur(15px);
+    background-color: #1e81b0;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+    transform: rotate(180deg);
+    color: white;
+}
