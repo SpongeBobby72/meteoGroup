@@ -12,7 +12,7 @@ const RainCard = (data) => {
     <div className="cardDiv">
       <Card sx={{ maxWidth: 345 }}>
       
-        <CardContent> 
+        <CardContent className="cardDiv"> 
           <Typography component="p">
             {MinParser(data.minutely.dt)}
           </Typography>
