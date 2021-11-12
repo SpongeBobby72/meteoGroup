@@ -1,7 +1,6 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 const RainCard = (data) => {
@@ -12,14 +11,14 @@ const RainCard = (data) => {
       
     <div className="cardDiv">
         
-      <Card sx={{ width: 100 }}>
+      <Card sx={{ width: 100 ,backgroundColor: 'transparent'}}>
       
         <CardContent> 
           <Typography  component="p" sx={{color:"white"}}>
           {MinParser(data.minutely.dt)}
           </Typography>
 
-          <Typography component="p">
+          <Typography component="p" sx={{color:"white"}}>
           {data.minutely.precipitation} % 
           </Typography>
         </CardContent>
