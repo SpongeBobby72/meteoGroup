@@ -10,6 +10,8 @@ import thunk from "redux-thunk";
  * ******** */ 
 import {WeatherReducer} from "./reducers/WeatherReducer";
 import {FavoriteReducer} from "./reducers/FavoriteReducer";
+// Cats
+import { ImagesReducer } from "./reducers/ImagesReducers";
 
 /*
  * Centralisation du store (root reducers)
@@ -17,6 +19,8 @@ import {FavoriteReducer} from "./reducers/FavoriteReducer";
 const rootReducer = combineReducers({
     weather: WeatherReducer,
     favorite: FavoriteReducer,
+    // Cats
+    images:ImagesReducer
 });
 
 /*

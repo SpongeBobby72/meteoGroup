@@ -22,7 +22,7 @@ const ForeCast = (data) => {
           </Typography>
 
           <Typography variant="p" color="text.secondary" component="div">
-          {Math.round(data.daily.temp.day)}
+            {Math.round(data.daily.temp.day)}
           </Typography>
         </CardContent>
       </Card>

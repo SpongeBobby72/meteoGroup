@@ -1,28 +1,18 @@
-import React, { useState } from "react";
-import MeteoDay from "./components/MeteoDay";
-import MeteoWeek from "./components/MeteoWeek";
-import NavBar from "./components/NavBar";
-import Meteo8Days from "./components/Meteo8Days";
+import React from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import Weather from "./pages/Weather";
+import Articles from "./pages/Articles";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
-  const [playOnce, setPlayOnce] = useState(true);
-  const [weatherStyleApp, setWeatherStyleApp] = useState("nightApp");
-  const timer = new Date(Date.now()).toString().slice(16, 18);
-
-  if (playOnce) {
-    if (6 < timer && timer < 19) {
-      setWeatherStyleApp("dayApp");
-      setPlayOnce(false);
-    }
-  }
-
   return (
-    <div className={weatherStyleApp}>
-      <MeteoDay />
-      <MeteoWeek />
-      <Meteo8Days />
-      <NavBar />
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path="/" exact element={<Weather />} />
+        <Route path="/article" exact element={<Articles/>} />
+        <Route element={NotFound} />
+      </Routes>
+    </HashRouter>
   );
 };
 

@@ -7,13 +7,14 @@ import { store } from "./store";
 import { StyledEngineProvider } from "@mui/material/styles";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-import {
-  getWeather,
-  getWeathersWeek,
-} from "./store/actions/WeatherActions";
+import { getWeather, getWeathersWeek } from "./store/actions/WeatherActions";
+// Cats
+// import { getImages } from "./store/actions/ImagesActions";
 
 store.dispatch(getWeather("Paris"));
 store.dispatch(getWeathersWeek("Paris"));
+// Cats
+// store.dispatch(getImages());
 
 ReactDOM.render(
   <StyledEngineProvider injectFirst>

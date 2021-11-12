@@ -76,7 +76,6 @@ const MeteoDay = () => {
     <Card className="meteoDay">
       {data.weather && (
         <Card className="CountryIndice">
-
           <Card sx={{ maxWidth: 345 }}>
             {/* Image de fond */}
             <CardMedia

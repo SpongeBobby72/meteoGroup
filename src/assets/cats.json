@@ -1,22 +1,4 @@
 {
-  "favorite": [
-    {
-      "name": "Masuperville",
-      "id": 1
-    },
-    {
-      "name": "Paris",
-      "id": 2
-    },
-    {
-      "name": "Montaigu",
-      "id": 3
-    },
-    {
-      "name": "Par",
-      "id": 4
-    }
-  ],
   "images": [
     {
       "url": "http://25.media.tumblr.com/tumblr_lyufg8UKQ51qgg1s9o1_500.jpg",

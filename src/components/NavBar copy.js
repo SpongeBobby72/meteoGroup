@@ -1,14 +1,15 @@
-import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Button from "../components/Buttons";
-import InputTown from "./InputTown";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import InputTown from "./InputTown";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar" id="navBarSelectionTown">
       <Accordion>
+       
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -16,12 +17,8 @@ const NavBar = () => {
         ></AccordionSummary>
         <AccordionDetails>
           <InputTown />
-          <NavLink exact to="/article" activeClassname="nav-active">
-            <Button />
-          </NavLink>
         </AccordionDetails>
       </Accordion>
-      {/* <NavLink exact to='/' activeClassname="weather"> */}
     </div>
   );
 };
