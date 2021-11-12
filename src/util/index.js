@@ -26,3 +26,14 @@ export const datePaser = (date) => {
   })
   return newDate
 };
+
+export const MinParser = (date) => {
+  const dateMin = new Date(date*1000);
+  let newDate = new Date(dateMin ).toLocaleDateString('fr-FR',{
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric"
+  })
+  return newDate
+};
