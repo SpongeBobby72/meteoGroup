@@ -11,7 +11,7 @@ export const dateFormatMeteo = (date) => {
     day: "numeric",
     weekday:"long"
   });
-  return newDate;
+  return newDate.substr(0, 3) + "."
 };
 
 
@@ -24,5 +24,6 @@ export const datePaser = (date) => {
     minute: "numeric",
     second: "numeric"
   })
+
   return newDate
 };
