@@ -7,11 +7,12 @@ import ForeCast from "./ForeCast";
 
 const Meteo8Days = () => {
   const data = useSelector((state) => state.weather.data);
+  console.log('api kevin',data);
   const dataAll = useSelector((state) => state.weather.dataAll);
-//   console.log(dataAll);
+  console.log(dataAll);
 
   useEffect(() => {
-    console.log(data.weather);
+    // console.log(data.weather);
     if (data.weather) {
       // console.log(dataCurrent.coord.lat, dataCurrent.coord.lon);
       store.dispatch(getMeteoAll(data.coord.lat, data.coord.lon));
