@@ -9,7 +9,7 @@ const ForeCast = (data) => {
   // console.log(data.daily.weather[0].main);
 
   return (
-    <div className="cardDiv">
+    <div className="cardDiv">     
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia className={data.daily.weather[0].main} />
         <CardContent>
