@@ -1,23 +1,32 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 
 const CardMeteoWeek = (props) => {
   const { time } = props;
   return (
     <div className="cardDiv">
-      <Card>
+      <Card sx={{ maxWidth: 345 }}>
         {/* Image de fond */}
-        <Card className={time.weather[0].main} />
-        <Card.Body>
+        <CardMedia className={time.weather[0].main} />
+        <CardContent>
           {/* Date */}
-          <Card.Title>
+          <Typography gutterBottom variant="h5" component="div">
             {time.dt_txt.slice(8, 10)}/{time.dt_txt.slice(5, 7)}
-          </Card.Title>
+          </Typography>
+
           {/* Heure */}
-          <Card.Text>{time.dt_txt.slice(11, 16)}</Card.Text>
+          <Typography variant="body2" color="text.secondary">
+            {time.dt_txt.slice(11, 16)}
+          </Typography>
+
           {/* Temperature */}
-          <Card.Text>{Math.round(time.main.temp)}°</Card.Text>
-        </Card.Body>
+          <Typography variant="body2" color="text.secondary">
+            {Math.round(time.main.temp)}°
+          </Typography>
+        </CardContent>
       </Card>
     </div>
   );

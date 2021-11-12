@@ -1,5 +1,5 @@
 import React from "react";
-import { CardGroup } from "react-bootstrap";
+import CardContent from '@mui/material/CardContent';
 import { useSelector } from "react-redux";
 import CardMeteoWeek from "./CardMeteoWeek";
 
@@ -11,11 +11,11 @@ const MeteoWeek = () => {
   return (
     <div className="meteoWeek">
       {dataWeek[0] && (
-        <CardGroup className="meteoWeekUl">
+        <CardContent className="meteoWeekUl">
           {dataWeek.map((time) => (
             <CardMeteoWeek time={time} key={time.dt} />
           ))}
-        </CardGroup>
+        </CardContent>
       )}
     </div>
   );
