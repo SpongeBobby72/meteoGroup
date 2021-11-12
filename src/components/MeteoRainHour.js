@@ -22,6 +22,7 @@ function MeteoRainHour() {
 
     return (
         <div className="meteoWeek">
+            <h1>Pluviométrie</h1>
             {data.weather && dataAll.minutely && (
                 <CardContent className="meteoWeekUl">
                     {dataAll.minutely.map((data, index) => (

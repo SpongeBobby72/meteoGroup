@@ -9,15 +9,18 @@ const RainCard = (data) => {
   // console.log(data.daily.weather[0].main);
 
   return (
+      
     <div className="cardDiv">
+        
       <Card sx={{ maxWidth: 345 }}>
       
         <CardContent className="cardDiv"> 
-          <Typography component="p">
+        
+          <Typography gutterBottom variant="h5" component="div">
             {MinParser(data.minutely.dt)}
           </Typography>
 
-          <Typography component="div">
+          <Typography component="">
           Risque de pluie: {data.minutely.precipitation} 
           </Typography>
         </CardContent>
