@@ -5,23 +5,22 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 
 const RainCard = (data) => {
-  const { dateFormatMeteo, MinParser } = require("../util/index");
+  const { MinParser } = require("../util/index");
   // console.log(data.daily.weather[0].main);
 
   return (
       
     <div className="cardDiv">
         
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ width: 100 }}>
       
-        <CardContent className="cardDiv"> 
-        
-          <Typography gutterBottom variant="h5" component="div">
-            {MinParser(data.minutely.dt)}
+        <CardContent> 
+          <Typography  component="p" sx={{color:"white"}}>
+          {MinParser(data.minutely.dt)}
           </Typography>
 
-          <Typography component="">
-          Risque de pluie: {data.minutely.precipitation} 
+          <Typography component="p">
+          {data.minutely.precipitation} % 
           </Typography>
         </CardContent>
       </Card>

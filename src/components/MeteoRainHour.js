@@ -1,8 +1,8 @@
 import { CardContent } from "@mui/material";
-import React, { useEffect } from "react";
-import { store } from "../store";
+import React from "react";
+
 import { useSelector } from "react-redux";
-import { getMeteoAll } from "../store/actions/WeatherActions";
+
 import RainCard from "./RainCard"
 
 
@@ -12,17 +12,11 @@ function MeteoRainHour() {
     const dataAll = useSelector((state) => state.weather.dataAll);
     console.log(dataAll);
  
-    useEffect(() => {
-        // console.log(data.weather);
-        if (data.weather) {
-          // console.log(dataCurrent.coord.lat, dataCurrent.coord.lon);
-          store.dispatch(getMeteoAll(data.coord.lat, data.coord.lon));
-        }
-      }, [data]);
+   
 
     return (
         <div className="meteoWeek">
-            <h1>Pluviométrie</h1>
+            <h1 className="cardDiv">Pluviométrie</h1>
             {data.weather && dataAll.minutely && (
                 <CardContent className="meteoWeekUl">
                     {dataAll.minutely.map((data, index) => (
