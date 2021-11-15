@@ -4,6 +4,10 @@ import MeteoWeek from "../components/MeteoWeek";
 import NavBar from "../components/NavBar";
 import Meteo8Days from "../components/Meteo8Days";
 import MeteoRainHour from "../components/MeteoRainHour";
+import WeatherMap from "../components/WeatherMap";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 const Weather = () => {
   const [playOnce, setPlayOnce] = useState(true);
@@ -19,10 +23,16 @@ const Weather = () => {
 
   return (
     <div className={weatherStyleApp}>
-      <MeteoDay />
+      <React.Fragment>
+        <CssBaseline />
+        <Container className="containerTop" maxWidth="xl">
+          <MeteoDay />
+          <WeatherMap />
+        </Container>
+      </React.Fragment>
       <MeteoWeek />
       <Meteo8Days />
-      <MeteoRainHour/>
+      <MeteoRainHour />
       <NavBar />
     </div>
   );
