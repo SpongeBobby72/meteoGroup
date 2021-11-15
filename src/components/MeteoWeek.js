@@ -1,7 +1,9 @@
 import React from "react";
-import CardContent from '@mui/material/CardContent';
 import { useSelector } from "react-redux";
 import CardMeteoWeek from "./CardMeteoWeek";
+
+//import component Mui
+import * as theme from "../theme";
 
 const MeteoWeek = () => {
   const dataWeek = useSelector((state) => state.weather.dataWeek);
@@ -11,11 +13,11 @@ const MeteoWeek = () => {
   return (
     <div className="meteoWeek">
       {dataWeek[0] && (
-        <CardContent className="meteoWeekUl">
+        <theme.CardContent className="meteoWeekUl">
           {dataWeek.map((time) => (
             <CardMeteoWeek time={time} key={time.dt} />
           ))}
-        </CardContent>
+        </theme.CardContent>
       )}
     </div>
   );

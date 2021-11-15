@@ -1,10 +1,15 @@
 import * as React from "react";
+<<<<<<< HEAD
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { ArrowCircleUp } from "@mui/icons-material";
 import fn from "../utils";
+=======
+// MUI
+import * as theme from "../theme";
+>>>>>>> dev
 
 const ForeCast = (data) => {
   // const {directionWin, dateFormatMeteo } = require("../util");
@@ -14,6 +19,7 @@ const ForeCast = (data) => {
   // const func = require ("../utils")
 
   return (
+<<<<<<< HEAD
     <div className="cardDiv">
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia className={data.daily.weather[0].main} />
@@ -21,18 +27,28 @@ const ForeCast = (data) => {
           <Typography sx={{ color: "white" }} component="p">
             {/* {fn.dateFormatMeteo(data.daily.dt)} */}
           </Typography>
+=======
+    <div className="cardDiv">     
+      <theme.Card sx={{ maxWidth: 345 }}>
+        <theme.CardMedia className={data.daily.weather[0].main} />
+        <theme.CardContent>
+          <theme.Typography sx={{ color: "white" }} component="p">
+            {dateFormatMeteo(data.daily.dt)}
+          </theme.Typography>
+>>>>>>> dev
 
-          <Typography sx={{ color: "white" }} component="div">
+          <theme.Typography sx={{ color: "white" }} component="div">
             {data.daily.weather[0].description}
-          </Typography>
+          </theme.Typography>
 
-          <Typography
+          <theme.Typography
             sx={{ color: "white" }}
             variant="p"
             color="text.secondary"
             component="div"
           >
             {Math.round(data.daily.temp.day)} °C
+<<<<<<< HEAD
           </Typography>
 
           <Typography sx={{ mr: 1, color: "white" }} component="span">
@@ -51,6 +67,11 @@ const ForeCast = (data) => {
           />
         </CardContent>
       </Card>
+=======
+          </theme.Typography>
+        </theme.CardContent>
+      </theme.Card>
+>>>>>>> dev
     </div>
   );
 };
