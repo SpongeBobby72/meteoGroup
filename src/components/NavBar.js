@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
+    <div className="navbar"  id="navBarSelectionTown">
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
