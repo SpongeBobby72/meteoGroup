@@ -1,54 +1,12 @@
-// module.exports = {
-//   dateFormatMeteo: function (date) {
-//     const dateUnix = new Date(date * 1000);
-//     let weekday = new Date(dateUnix).toLocaleDateString("fr-FR", {
-//       // year: "numeric",
-//       // month: "long",
-//       weekday: "long",
-//     });
+//  * ******* */
+//  * Fichier index.js dans dossier Date
+//  * Fichier qui centralise les différentes functions dans le dossier Date
+//  * ******* */
 
-//     let day = new Date(dateUnix).toLocaleDateString("fr-FR", {
-//       day: "numeric",
-//     });
+// Import des differentes fonctions via leurs fichier dans ce dossier Date
+import { minParser } from "./minParser"
+import { dateFormatMeteo } from "./dateFormatMeteo"
+import { datePaser } from "./dateParser"
 
-//     let newDate = weekday.substr(0, 3) + ". " + day;
-//     return newDate;
-//   }
-// };
-
-export function dateFormatMeteo(date) {
-  const dateUnix = new Date(date * 1000);
-  let weekday = new Date(dateUnix).toLocaleDateString("fr-FR", {
-    // year: "numeric",
-    // month: "long",
-    weekday: "long",
-  });
-
-  let day = new Date(dateUnix).toLocaleDateString("fr-FR", {
-    day: "numeric",
-  });
-
-  let newDate = weekday.substr(0, 3) + ". " + day;
-  return newDate;
-}
-
-export const minParser = (date) => {
-  const dateMin = new Date(date*1000);
-  let newDate = new Date(dateMin ).toLocaleDateString('fr-FR',{
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-  })
-  let hour = newDate.split(',');
-  console.log(hour[1]);
-  return hour[1]
-};
-
-
-export default {
-  dateFormatMeteo,
-  minParser
-  
-}
+// Export les fonctions importées ci-dessous
+export { minParser, dateFormatMeteo, datePaser }

@@ -9,6 +9,6 @@ export const minParser = (date) => {
     minute: "numeric",
   })
   let hour = newDate.split(',');
-  console.log(hour[1]);
+  // console.log(hour[1]);
   return hour[1]
 };

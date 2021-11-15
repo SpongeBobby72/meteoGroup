@@ -45,6 +45,6 @@ export { default as CssBaseline } from '@mui/material/CssBaseline';
 export { default as Container } from '@mui/material/Container';
 
 //icon
-export { default as ArrowUpward } from "@mui/material/Icon";
+export { default as ArrowCircleUp } from "@mui/icons-material/ArrowCircleUp";
 
 export default theme;

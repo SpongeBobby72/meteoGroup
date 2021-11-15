@@ -3,28 +3,25 @@ import * as React from "react";
 // MUI
 import * as theme from "../theme";
 
-const ForeCast = (data) => {
-  // const {directionWin, dateFormatMeteo } = require("../util");
-  // console.log(data.daily.weather[0].main);
+//import des fonctions
+import * as fn from "../utils"
 
-  // const {dateFormatMeteo, directionWin} = require("../util/index")
-  // const func = require ("../utils")
+const ForeCast = (data) => {
 
   return (
-    <div className="cardDiv">     
+    <div className="cardDiv">
       <theme.Card sx={{ maxWidth: 345 }}>
         <theme.CardMedia className={data.daily.weather[0].main} />
         <theme.CardContent>
           <theme.Typography sx={{ color: "white" }} component="p">
-            {/* {dateFormatMeteo(data.daily.dt)} */}
+            {fn.dateFormatMeteo(data.daily.dt)}
           </theme.Typography>
 
           <theme.Typography sx={{ color: "white" }} component="p">
             {data.daily.weather[0].description}
           </theme.Typography>
 
-
-               <theme.Typography
+          <theme.Typography
             sx={{ color: "white" }}
             variant="p"
             color="text.secondary"
@@ -34,15 +31,13 @@ const ForeCast = (data) => {
           </theme.Typography>
 
           <theme.Typography sx={{ color: "white" }} component="p">
-          {Math.round(data.daily.wind_speed)} Km/h
+            {Math.round(data.daily.wind_speed)} Km/h
           </theme.Typography>
 
-          <theme.Typography sx={{ color: "white" }} component="p">
-
+          <theme.Typography sx={{ color: "white", display: "flex", alignSelf: "center"}} component="p">
+            {fn.directionWin(data.daily.wind_deg)}
+            <theme.ArrowCircleUp sx={{ ml:1, color: "white", transform: `rotateZ(${data.daily.wind_deg}deg)` }} />
           </theme.Typography>
-
-          <theme.ArrowUpward sx={{transform: "rotate(90deg)"}} />
-            {/* {data.daily.wind_deg} */}
 
         </theme.CardContent>
       </theme.Card>
