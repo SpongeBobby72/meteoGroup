@@ -5,6 +5,7 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import {Datee} from "../utils/index";
 
 const RainCard = (data) => {
   // const { minParser } = require("../util/index");
@@ -18,7 +19,7 @@ const RainCard = (data) => {
       
         <CardContent> 
           <Typography  component="p" sx={{color:"white"}}>
-          {/* {minParser(data.minutely.dt)} */}
+          {Datee.minParser(data.minutely.dt)}
           </Typography>
 
           <Typography component="p" sx={{color:"white"}}>

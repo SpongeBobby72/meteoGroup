@@ -4,12 +4,19 @@
 
 // Import des fonctions
 
-import { dateFormatMeteo } from "./date";
+import * as Datee from "./Date/index.js";
+// import { direction }  from "./Direction";
 
+// const fn = {
+//   dateFormatMeteo,
+//   direction,
+//   minParser,
+// };
 
+console.log('Datteee', Datee)
 
 export default {
-  dateFormatMeteo
+  Datee
 };
 
 
