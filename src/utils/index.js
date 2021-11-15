@@ -6,11 +6,11 @@
 
 import { dateFormatMeteo } from "./date";
 
-const func = {
-  dateFormatMeteo,
-};
 
-export default func;
+
+export default {
+  dateFormatMeteo
+};
 
 
 
