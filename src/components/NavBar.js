@@ -1,23 +1,25 @@
-import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
+
 import React from "react";
-import InputTown from "./InputTown";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Buttons from "../components/Buttons";
+
+//import component MUI
+import * as theme from "../theme";
 
 const NavBar = () => {
   return (
     <div className="navbar" id="navBarSelectionTown" >
-      <Accordion>
-        <AccordionSummary
+      <theme.Accordion>
+        <theme.AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-        ></AccordionSummary>
-        <AccordionDetails>
-          <InputTown />
+        ></theme.AccordionSummary>
+        <theme.AccordionDetails>
+          <theme.InputTown />
             <Buttons /> 
-        </AccordionDetails>
-      </Accordion>
+        </theme.AccordionDetails>
+      </theme.Accordion>
     </div>
   );
 };
