@@ -9,18 +9,18 @@ export default function Map() {
   const tileRef = useRef(null);
 
   tileRef.current = L.tileLayer(
-    `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`,
-    {
+    `https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}`,
+    { 
       attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        'Tiles &copy; meteo fr',
     }
   );
 
   const mapStyles = { overflow: "hidden", width: "100%", height: "500px" };
 
   const mapParams = {
-    center: [37.0902, -95.7129],
-    zoom: 3,
+    center: [48, 2.3],
+    zoom: 5,
     zoomControl: false,
     maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
     closePopupOnClick: false,
@@ -60,7 +60,7 @@ export default function Map() {
   return (
     <React.Fragment>
         <CssBaseline />
-        <Container maxWidth="sm">
+        <Container className="containerMap" maxWidth="sm">
             <Box id="map" style={mapStyles} />
         </Container>
     </React.Fragment>
