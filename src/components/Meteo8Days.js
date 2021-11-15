@@ -1,9 +1,11 @@
-import { CardContent } from "@mui/material";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { store } from "../store";
 import { getMeteoAll } from "../store/actions/WeatherActions";
 import ForeCast from "./ForeCast";
+
+// MUI
+import * as theme from "../theme";
 
 const Meteo8Days = () => {
   const data = useSelector((state) => state.weather.data);
@@ -22,11 +24,11 @@ const Meteo8Days = () => {
   return (
     <div className="meteoWeek">
       {data.weather && dataAll.daily && (
-        <CardContent className="meteoWeekUl">
+        <theme.CardContent className="meteoWeekUl">
           {dataAll.daily.map((data, index) => (
             <ForeCast daily={data} key={index} />
           ))}
-        </CardContent>
+        </theme.CardContent>
       )}
     </div>
   );

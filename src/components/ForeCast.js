@@ -1,8 +1,6 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+// MUI
+import * as theme from "../theme";
 
 const ForeCast = (data) => {
   const { dateFormatMeteo } = require("../util/index");
@@ -10,27 +8,27 @@ const ForeCast = (data) => {
 
   return (
     <div className="cardDiv">     
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia className={data.daily.weather[0].main} />
-        <CardContent>
-          <Typography sx={{ color: "white" }} component="p">
+      <theme.Card sx={{ maxWidth: 345 }}>
+        <theme.CardMedia className={data.daily.weather[0].main} />
+        <theme.CardContent>
+          <theme.Typography sx={{ color: "white" }} component="p">
             {dateFormatMeteo(data.daily.dt)}
-          </Typography>
+          </theme.Typography>
 
-          <Typography sx={{ color: "white" }} component="div">
+          <theme.Typography sx={{ color: "white" }} component="div">
             {data.daily.weather[0].description}
-          </Typography>
+          </theme.Typography>
 
-          <Typography
+          <theme.Typography
             sx={{ color: "white" }}
             variant="p"
             color="text.secondary"
             component="div"
           >
             {Math.round(data.daily.temp.day)} °C
-          </Typography>
-        </CardContent>
-      </Card>
+          </theme.Typography>
+        </theme.CardContent>
+      </theme.Card>
     </div>
   );
 };

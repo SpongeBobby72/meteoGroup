@@ -1,17 +1,15 @@
 import React from "react";
-// import Button from "@mui/material/Button";
-// import Stack from "@mui/material/Stack";
-
-import * as Mui from '@mui/material';
+// MUI
+import * as theme from "../theme";
 
 const Buttons = () => {
   return (
     <div>
-      <Mui.Stack direction="row" spacing={2}>
-        <Mui.Button href="/articles#/article" variant="contained" color="warning">
+      <theme.Stack direction="row" spacing={2}>
+        <theme.Button href="/articles#/article" variant="contained" color="warning">
           ARTICLE
-        </Mui.Button>
-      </Mui.Stack>
+        </theme.Button>
+      </theme.Stack>
     </div>
   );
 };
