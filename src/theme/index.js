@@ -39,7 +39,6 @@ export { default as Accordion }  from "@mui/material/Accordion";
 export { default as AccordionSummary }  from "@mui/material/AccordionSummary";
 export { default as AccordionDetails }  from "@mui/material/AccordionDetails";
 export { default as ExpandMoreIcon }  from "@mui/icons-material/ExpandMore";
-export { default as InputTown }  from "./InputTown";
 
 // Container
 export { default as CssBaseline } from '@mui/material/CssBaseline';
