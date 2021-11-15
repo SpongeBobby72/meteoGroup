@@ -46,3 +46,10 @@ export const MinParser = (date) => {
   console.log(hour[1]);
   return hour[1]
 };
+
+
+
+
+
+
+

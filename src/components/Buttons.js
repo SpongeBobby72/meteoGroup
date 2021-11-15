@@ -8,7 +8,7 @@ const Buttons = () => {
     <div>
       {/* <Cards/> */}
       <Stack direction="row" spacing={2}>
-        <Button href="/articles" variant="contained" color="warning">
+        <Button href="/articles#/article" variant="contained" color="warning">
           ARTICLE
         </Button>
       </Stack>
