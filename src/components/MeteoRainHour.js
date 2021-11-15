@@ -25,7 +25,6 @@ function MeteoRainHour() {
         console.log(minutely);
     }
 
-
     return (
         <div className="meteoWeek">
             <h1 className="cardDiv">Pluviométrie</h1>
