@@ -44,4 +44,7 @@ export { default as ExpandMoreIcon }  from "@mui/icons-material/ExpandMore";
 export { default as CssBaseline } from '@mui/material/CssBaseline';
 export { default as Container } from '@mui/material/Container';
 
+//icon
+export { default as ArrowUpward } from "@mui/material/Icon";
+
 export default theme;

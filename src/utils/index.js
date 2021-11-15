@@ -2,22 +2,27 @@
 //  * Utils
 //  * ******* */
 
+
+import directionWin from "./Direction";
+
+export default directionWin;
+
 // Import des fonctions
 
-import * as Datee from "./Date/index.js";
-// import { direction }  from "./Direction";
+// import * as Datee from "./Date/index.js";
+// // import { direction }  from "./Direction";
 
-// const fn = {
-//   dateFormatMeteo,
-//   direction,
-//   minParser,
+// // const fn = {
+// //   dateFormatMeteo,
+// //   direction,
+// //   minParser,
+// // };
+
+// console.log('Datteee', Datee)
+
+// export default {
+//   Datee
 // };
-
-console.log('Datteee', Datee)
-
-export default {
-  Datee
-};
 
 
 

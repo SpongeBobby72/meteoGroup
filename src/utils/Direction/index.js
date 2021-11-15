@@ -1,10 +1,6 @@
 import { directionWin } from "./directionWin"
 
-const direction = {
-  directionWin,
-};
-
-export default direction;
+export default directionWin;
 
 // export const directionWin = (data) => {
 //     let dataNumber = parseFloat(data)

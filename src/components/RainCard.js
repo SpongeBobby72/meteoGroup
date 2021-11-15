@@ -18,7 +18,7 @@ const RainCard = (data) => {
       
         <theme.CardContent> 
           <theme.Typography  component="p" sx={{color:"white"}}>
-          {MinParser(data.minutely.dt)}
+          {/* {MinParser(data.minutely.dt)} */}
           </theme.Typography>
 
           <theme.Typography component="p" sx={{color:"white"}}>

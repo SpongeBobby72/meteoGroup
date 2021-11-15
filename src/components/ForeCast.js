@@ -1,3 +1,4 @@
+
 import * as React from "react";
 // MUI
 import * as theme from "../theme";
@@ -18,11 +19,12 @@ const ForeCast = (data) => {
             {/* {dateFormatMeteo(data.daily.dt)} */}
           </theme.Typography>
 
-          <theme.Typography sx={{ color: "white" }} component="div">
+          <theme.Typography sx={{ color: "white" }} component="p">
             {data.daily.weather[0].description}
           </theme.Typography>
 
-          <theme.Typography
+
+               <theme.Typography
             sx={{ color: "white" }}
             variant="p"
             color="text.secondary"
@@ -30,6 +32,18 @@ const ForeCast = (data) => {
           >
             {Math.round(data.daily.temp.day)} °C
           </theme.Typography>
+
+          <theme.Typography sx={{ color: "white" }} component="p">
+          {Math.round(data.daily.wind_speed)} Km/h
+          </theme.Typography>
+
+          <theme.Typography sx={{ color: "white" }} component="p">
+
+          </theme.Typography>
+
+          <theme.ArrowUpward sx={{transform: "rotate(90deg)"}} />
+            {/* {data.daily.wind_deg} */}
+
         </theme.CardContent>
       </theme.Card>
     </div>
