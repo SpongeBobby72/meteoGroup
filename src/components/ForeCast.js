@@ -15,7 +15,7 @@ const ForeCast = (data) => {
         <theme.CardMedia className={data.daily.weather[0].main} />
         <theme.CardContent>
           <theme.Typography sx={{ color: "white" }} component="p">
-            {dateFormatMeteo(data.daily.dt)}
+            {/* {dateFormatMeteo(data.daily.dt)} */}
           </theme.Typography>
 
           <theme.Typography sx={{ color: "white" }} component="div">
