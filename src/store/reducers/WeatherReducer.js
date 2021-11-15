@@ -9,6 +9,8 @@ import * as Actions from "../actions/ActionTypes.js";
 const initialState = {
   data: {},
   dataWeek: {},
+  //Update wil
+  dataAll: {},
 };
 
 /*
@@ -23,6 +25,9 @@ export function WeatherReducer(state = initialState, action) {
       return { ...state, data: action.payload };
     case Actions.GET_WEATHERSWEEK_DATA:
       return { ...state, dataWeek: action.payload };
+    //Update wil
+    case Actions.GET_APIMETEO_ALL_DATA:
+      return { ...state, dataAll: action.payload };
   }
 }
 

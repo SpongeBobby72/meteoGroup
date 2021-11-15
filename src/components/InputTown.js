@@ -1,17 +1,19 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
 import { store } from "../store";
 
 import { getWeather, getWeathersWeek } from "../store/actions/WeatherActions";
 
 const InputTown = (props) => {
-
-  function handleChangeSelect(e) {
-    if (e.target.value.length > 0) {
-      store.dispatch(getWeather(e.target.value));
-      store.dispatch(getWeathersWeek(e.target.value));
+  function getValue() {
+    var input = document.getElementById("ville").value;
+    if (input.length > 0) {
+      store.dispatch(getWeather(input));
+      store.dispatch(getWeathersWeek(input));
     }
   }
 
@@ -25,12 +27,12 @@ const InputTown = (props) => {
         noValidate
         autoComplete="off"
       >
-        <TextField
-          id="ville"
-          label="Ville"
-          variant="outlined"
-          onChange={(e) => handleChangeSelect(e)}
-        />
+        <TextField id="ville" label="Ville" variant="outlined" />
+        <Stack spacing={2} direction="row">
+          <Button onClick={(e) => getValue(e)} variant="contained">
+            OK
+          </Button>
+        </Stack>
       </Box>
     </div>
   );

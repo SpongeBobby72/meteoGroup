@@ -20,9 +20,10 @@
 }
 .imageSun {
   vertical-align: middle;
+  display: inline-block;
 }
 .sunriseCard, .sunsetCard {
-  width: 180px;
+  width: 135px;
   display: inline-block;
 }
 .sunriseSunset {
@@ -88,4 +89,9 @@ $lists: (
   font-size: 1rem;
   font-weight: bold;
   position: absolute;
+}
+.css-bhp9pd-MuiPaper-root-MuiCard-root, .css-1ri6ub7-MuiPaper-root-MuiCard-root {
+  background: none;
+  box-shadow: none;
+  margin: auto;
 }

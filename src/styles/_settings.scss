@@ -31,6 +31,9 @@ a:visited {
 }
 .dayApp {
   background-color: $color-5;
+}
+.leaflet-container {
+  width: 100%;
   height: 100vh;
 }
 .nightApp {
