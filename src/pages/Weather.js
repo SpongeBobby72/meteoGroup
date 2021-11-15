@@ -4,6 +4,7 @@ import MeteoWeek from "../components/MeteoWeek";
 import NavBar from "../components/NavBar";
 import Meteo8Days from "../components/Meteo8Days";
 import MeteoRainHour from "../components/MeteoRainHour";
+import WeatherMap from "../components/WeatherMap";
 
 const Weather = () => {
   const [playOnce, setPlayOnce] = useState(true);
@@ -20,6 +21,7 @@ const Weather = () => {
   return (
     <div className={weatherStyleApp}>
       <MeteoDay />
+      <WeatherMap />
       <MeteoWeek />
       <Meteo8Days />
       <MeteoRainHour/>
