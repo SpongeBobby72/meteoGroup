@@ -1,21 +1,20 @@
 .card {
-    position: relative;
-    margin: 5px;
-    border-radius: 4px;
-    margin-top: 15px;
-    padding: 2%;
-    font-family: $font-1;
-    transition: 0.3s;
-    overflow: hidden;
-    border-radius: 4px;
-    text-align: center;
-    color: black;
+  position: relative;
+  margin: 5px;
+  border-radius: 4px;
+  margin-top: 15px;
+  padding: 2%;
+  font-family: $font-1;
+  transition: 0.3s;
+  overflow: hidden;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
 
 
-    p {
-        font-family: $font-1;
-        font-size: 12px;
-        color: black;
-    }
-
+p {
+  font-family: $font-1;
+  font-size: 12px;
+  color: black;
 }

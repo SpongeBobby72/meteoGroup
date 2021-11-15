@@ -10,11 +10,11 @@ import Typography from "@mui/material/Typography";
 // Les actions du STORE sont contenus dans les PROPS
 const Cards = (props) => {
   return (
-    <div className="card">
+    <div>
       <Card>
         <CardMedia component="img" height="230" image={props.data.url} />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" color="black">
+          <Typography gutterBottom variant="h5" component="" color="black">
             {props.data.id}
           </Typography>
           <Typography variant="body2">
