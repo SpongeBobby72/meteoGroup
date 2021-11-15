@@ -1,7 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Button from "../components/Buttons";
+// import { NavLink } from "react-router-dom";
+import Buttons from "../components/Buttons";
 import InputTown from "./InputTown";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
@@ -16,12 +16,11 @@ const NavBar = () => {
         ></AccordionSummary>
         <AccordionDetails>
           <InputTown />
-          <NavLink exact to="/article" activeClassname="nav-active">
-            <Button />
-          </NavLink>
+          {/* <NavLink exact to="/article" activeClassname="nav-active"> */}
+            <Buttons />
+          {/* </NavLink> */}
         </AccordionDetails>
       </Accordion>
-      {/* <NavLink exact to='/' activeClassname="weather"> */}
     </div>
   );
 };
