@@ -2,7 +2,7 @@
 import React from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Buttons from "../components/Buttons";
-
+import InputTown from "./InputTown";
 //import component MUI
 import * as theme from "../theme";
 
@@ -16,7 +16,7 @@ const NavBar = () => {
           id="panel1a-header"
         ></theme.AccordionSummary>
         <theme.AccordionDetails>
-          <theme.InputTown />
+          <InputTown />
             <Buttons /> 
         </theme.AccordionDetails>
       </theme.Accordion>
