@@ -1,3 +1,6 @@
+//         *************************************
+// ******* COMPONENT ENFANT DE RainCard.js *******
+//         *************************************
 import { CardContent } from "@mui/material";
 import React from "react";
 
@@ -8,9 +11,10 @@ import RainCard from "./RainCard"
 
 function MeteoRainHour() {
     const data = useSelector((state) => state.weather.data);
-    // console.log('api kevin',data);
+    
     const dataAll = useSelector((state) => state.weather.dataAll);
-    // console.log(typeof dataAll);
+    
+    const { Kakawait } = require("../util/index");
     // const minutely , la boucle for permet de prendre 1 elément sur 10 dans la tableau
     const minutely = [];
 
@@ -27,7 +31,7 @@ function MeteoRainHour() {
         <div className="meteoWeek">
             <h1 className="cardDiv">Pluviométrie</h1>
             {data.weather && dataAll.minutely && (
-                <CardContent >
+                <CardContent>
                     {minutely.map((data, index) => (
                         <RainCard minutely={data} key={index} />
                     ))}
