@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
 const RainCard = (data) => {
-  const { MinParser } = require("../util/index");
+  // const { minParser } = require("../util/index");
   // console.log(data.daily.weather[0].main);
 
   return (
@@ -15,7 +15,7 @@ const RainCard = (data) => {
       
         <CardContent> 
           <Typography  component="p" sx={{color:"white"}}>
-          {MinParser(data.minutely.dt)}
+          {/* {minParser(data.minutely.dt)} */}
           </Typography>
 
           <Typography component="p" sx={{color:"white"}}>
