@@ -1,9 +1,11 @@
 import { useSelector } from "react-redux";
 import Cards from "../components/Cards";
-// import Navigation from "../components/Navigation";
 
-import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
+// MUI
+// import Box from "@mui/material/Box";
+// import Grid from "@mui/material/Grid";
+import * as Mui from '@mui/material';
+
 import { useEffect } from "react";
 
 import { store } from "../store";
@@ -21,8 +23,8 @@ const Articles = () => {
       <h1>Cats</h1>
       <div className="card">
         {[0].map((id) => (
-          <Grid key={id}>
-            <Box
+          <Mui.Grid key={id}>
+            <Mui.Box
               sx={{ width: 1 }}
               display="grid"
               // Colonne 4
@@ -33,8 +35,8 @@ const Articles = () => {
                 data.map((data) => {
                   return <Cards data={data} key={data.id} />;
                 })}
-            </Box>
-          </Grid>
+            </Mui.Box>
+          </Mui.Grid>
         ))}
       </div>
     </div>
