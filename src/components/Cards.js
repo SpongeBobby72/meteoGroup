@@ -1,28 +1,26 @@
 import React from "react";
 
 // MUI
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import * as theme from "../theme";
+// Autre import de MUI de manière global
+// import * as Mui from '@mui/material';
 
 // Les actions du STORE sont contenus dans les PROPS
 const Cards = (props) => {
   return (
-    <div className="card">
-      <Card>
-        <CardMedia component="img" height="230" image={props.data.url} />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div" color="black">
+    <div>
+      <theme.Card>
+        <theme.CardMedia component="img" height="230" image={props.data.url} />
+        <theme.CardContent>
+          <theme.Typography gutterBottom variant="h5" component="" color="black">
             {props.data.id}
-          </Typography>
-          <Typography variant="body2">
+          </theme.Typography>
+          <theme.Typography variant="body2">
             <p>{props.data.content}</p>
-          </Typography>
-        </CardContent>
-        <CardActions>{/* <Stack spacing={2}></Stack> */}</CardActions>
-      </Card>
+          </theme.Typography>
+        </theme.CardContent>
+        <theme.CardActions>{/* <Stack spacing={2}></Stack> */}</theme.CardActions>
+      </theme.Card>
     </div>
   );
 };
