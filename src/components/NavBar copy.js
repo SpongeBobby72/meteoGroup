@@ -5,6 +5,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import InputTown from "./InputTown";
 
+
 const NavBar = () => {
   return (
     <div className="navbar" id="navBarSelectionTown">

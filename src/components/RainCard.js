@@ -2,9 +2,9 @@
 // ******* COMPONENT PARENT DE MeteoRainHour.js *******
 //         *************************************
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
+
+ //import component Mui
+import * as theme from "../theme";
 
 const RainCard = (data) => {
   const { MinParser } = require("../util/index");
@@ -14,18 +14,18 @@ const RainCard = (data) => {
       
     <div className="cardDiv">
         
-      <Card sx={{ width: 100 ,backgroundColor: 'transparent'}}>
+      <theme.Card sx={{ width: 100 ,backgroundColor: 'transparent'}}>
       
-        <CardContent> 
-          <Typography  component="p" sx={{color:"white"}}>
+        <theme.CardContent> 
+          <theme.Typography  component="p" sx={{color:"white"}}>
           {MinParser(data.minutely.dt)}
-          </Typography>
+          </theme.Typography>
 
-          <Typography component="p" sx={{color:"white"}}>
+          <theme.Typography component="p" sx={{color:"white"}}>
           {data.minutely.precipitation} % 
-          </Typography>
-        </CardContent>
-      </Card>
+          </theme.Typography>
+        </theme.CardContent>
+      </theme.Card>
     </div>
   );
 };
