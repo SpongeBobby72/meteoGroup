@@ -14,7 +14,6 @@ function MeteoRainHour() {
     
     const dataAll = useSelector((state) => state.weather.dataAll);
     
-    const { Kakawait } = require("../util/index");
     // const minutely , la boucle for permet de prendre 1 elément sur 10 dans la tableau
     const minutely = [];
 
