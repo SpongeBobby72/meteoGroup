@@ -6,9 +6,10 @@ import * as React from "react";
  //import component Mui
 import * as theme from "../theme";
 
+//import des fonctions
+import * as fn from "../utils"
+
 const RainCard = (data) => {
-  const { MinParser } = require("../util/index");
-  // console.log(data.daily.weather[0].main);
 
   return (
       
@@ -18,7 +19,7 @@ const RainCard = (data) => {
       
         <theme.CardContent> 
           <theme.Typography  component="p" sx={{color:"white"}}>
-          {MinParser(data.minutely.dt)}
+          {fn.minParser(data.minutely.dt)}
           </theme.Typography>
 
           <theme.Typography component="p" sx={{color:"white"}}>

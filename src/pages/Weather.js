@@ -6,7 +6,6 @@ import Meteo8Days from "../components/Meteo8Days";
 import MeteoRainHour from "../components/MeteoRainHour";
 import WeatherMap from "../components/WeatherMap";
 import CssBaseline from "@mui/material/CssBaseline";
-import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
 const Weather = () => {

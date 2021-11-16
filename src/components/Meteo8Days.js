@@ -9,9 +9,9 @@ import * as theme from "../theme";
 
 const Meteo8Days = () => {
   const data = useSelector((state) => state.weather.data);
-  console.log('api kevin',data);
+  // console.log('api kevin',data);
   const dataAll = useSelector((state) => state.weather.dataAll);
-  console.log(dataAll);
+  // console.log(dataAll);
 
   useEffect(() => {
     // console.log(data.weather);

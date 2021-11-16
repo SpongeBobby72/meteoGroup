@@ -1,21 +1,23 @@
+
 import * as React from "react";
 // MUI
 import * as theme from "../theme";
 
+//import des fonctions
+import * as fn from "../utils"
+
 const ForeCast = (data) => {
-  const { dateFormatMeteo } = require("../util/index");
-  // console.log(data.daily.weather[0].main);
 
   return (
-    <div className="cardDiv">     
+    <div className="cardDiv">
       <theme.Card sx={{ maxWidth: 345 }}>
         <theme.CardMedia className={data.daily.weather[0].main} />
         <theme.CardContent>
           <theme.Typography sx={{ color: "white" }} component="p">
-            {dateFormatMeteo(data.daily.dt)}
+            {fn.dateFormatMeteo(data.daily.dt)}
           </theme.Typography>
 
-          <theme.Typography sx={{ color: "white" }} component="div">
+          <theme.Typography sx={{ color: "white" }} component="p">
             {data.daily.weather[0].description}
           </theme.Typography>
 
@@ -27,6 +29,16 @@ const ForeCast = (data) => {
           >
             {Math.round(data.daily.temp.day)} °C
           </theme.Typography>
+
+          <theme.Typography sx={{ color: "white" }} component="p">
+            {Math.round(data.daily.wind_speed)} Km/h
+          </theme.Typography>
+
+          <theme.Typography sx={{ color: "white", display: "flex", alignSelf: "center"}} component="p">
+            {fn.directionWin(data.daily.wind_deg)}
+            <theme.ArrowCircleUp sx={{ ml:1, color: "white", transform: `rotateZ(${data.daily.wind_deg}deg)` }} />
+          </theme.Typography>
+
         </theme.CardContent>
       </theme.Card>
     </div>

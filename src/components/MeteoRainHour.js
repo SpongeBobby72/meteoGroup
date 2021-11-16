@@ -21,7 +21,7 @@ function MeteoRainHour() {
             minutely.push(dataAll.minutely[i]);
             i = i + 10;
         }
-        console.log(minutely);
+        // console.log(minutely);
     }
 
     return (
