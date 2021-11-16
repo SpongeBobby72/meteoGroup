@@ -61,7 +61,7 @@ $lists: (
     );
 @each $name, $value in $lists {
   ##{$name} {
-    background-image: url(../../assets/#{$value}.svg);
+    background-image: url(../../images/#{$value}.svg);
     background-repeat: no-repeat;
     background-size: 230px;
     background-position: top;
@@ -70,7 +70,7 @@ $lists: (
 }
 @each $name, $value in $lists {
   .#{$name} {
-    background-image: url(../../assets/#{$value}.svg);
+    background-image: url(../../images/#{$value}.svg);
     background-repeat: no-repeat;
     background-size: 50px;
     width: 55px;

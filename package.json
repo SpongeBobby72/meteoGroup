@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "concurrently npm:w:*",
     "start": "react-scripts start",
-    "w:server": "json-server --w src/assets/db.json --port 3003",
+    "w:server": "json-server --w src/assets/db/db.json --port 3003",
     "build": "reacdefault-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

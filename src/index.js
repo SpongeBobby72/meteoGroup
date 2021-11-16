@@ -11,7 +11,7 @@ import { getWeather, getWeathersWeek } from "./store/actions/WeatherActions";
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme/index';
-import "./styles/index.scss";
+import "./assets/scss/index.scss";
 
 // Cats
 // import { getImages } from "./store/actions/ImagesActions";

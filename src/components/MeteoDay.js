@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import Sunrise from "../assets/sunrise.svg";
-import Sunset from "../assets/sunset.svg";
-import NotFavorite from "../assets/addFavoris.svg";
-import Favorite from "../assets/deleteFavoris.svg";
+import Sunrise from "../assets/images/sunrise.svg";
+import Sunset from "../assets/images/sunset.svg";
+import NotFavorite from "../assets/images/addFavoris.svg";
+import Favorite from "../assets/images/deleteFavoris.svg";
 
 // import component mui
 import * as theme from "../theme";

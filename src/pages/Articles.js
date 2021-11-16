@@ -4,12 +4,14 @@ import Cards from "../components/Cards";
 // MUI
 // import Box from "@mui/material/Box";
 // import Grid from "@mui/material/Grid";
-import * as Mui from '@mui/material';
+import * as Mui from "@mui/material";
 
 import { useEffect } from "react";
 
 import { store } from "../store";
 import { getImages } from "../store/actions/ImagesActions";
+import ButtonBack from "../components/ButtonBack";
+
 const Articles = () => {
   // UseSelector permet d'aller chercher le STORE de l'application
   const data = useSelector((state) => state.images.data);
@@ -20,7 +22,9 @@ const Articles = () => {
 
   return (
     <div className="article">
+      
       <h1>Cats</h1>
+      <ButtonBack />
       <div className="card">
         {[0].map((id) => (
           <Mui.Grid key={id}>
